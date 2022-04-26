@@ -3,14 +3,9 @@ import './App.css';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 
-  const Login = () => {
-    return <h2>Login</h2>
-  }
 
-  const FriendList = () => {
-    return <h2>FriendList</h2>
-  }
 
+  
   const AddFriendList = () => {
     return <h2>AddFriendList</h2>
   }
@@ -30,10 +25,10 @@ function App() {
     </ul>
       <h2>Client Auth Project</h2>
       <Switch>
-        <Route path="/login" component={Login} />
-        <Route path="/" component={Login} />
-        <Route path="/friends" component={FriendList} />
-        <Route path="/friends/add" component={AddFriendList} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Login} />
+        <Route exact path="/friends" component={FriendsList} />
+        <Route exact path="/friends/add" component={AddFriendList} />
       </Switch>
     </div>
     </Router>
